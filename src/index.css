@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.scanner-frame {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00bfff; /* bluish scanning color */
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px rgba(0,191,255,0.6);
+  opacity: 0.8;
+}
+
+*{
+  padding-top: 1px;
+}
+
+
+body {
+  font-family: sans-serif;
+}

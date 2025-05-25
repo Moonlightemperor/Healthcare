@@ -19,10 +19,10 @@ const Sidebar = () => {
 </div>
 
 
-<aside className={`fixed top-0 left-0 h-screen flex flex-col w-[80%] md:w-[17%] z-40  bg-[#EDF6FF]  md:p-[3%] p-6 transform ${
+<aside className={`fixed top-0 left-0 h-full flex flex-col w-[80%] md:w-[17%] z-40  bg-[#EDF6FF]  md:p-[3%] p-6 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto `}>
-      <h1 className="text-xl md:mt-0 mt-9 font-bold py-2 ">
+      <h1 className="text-xl md:mt-6 mt-9 font-bold py-2 ">
         <span className="text-[#00D4ED]">Health</span>
         <span className="text-[#2C2156]">care.</span>
       </h1>
@@ -52,7 +52,7 @@ const Sidebar = () => {
             <i className="ri-wechat-2-fill"></i>Chat
           </li>
           <li className="flex items-center gap-4">
-            <i className="ri-phone-fill"></i>Phone
+            <i className="ri-phone-fill"></i>Support
           </li>
         </ul>
       </nav>
