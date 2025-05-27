@@ -24,7 +24,7 @@ const DashboardRight = () => {
         ))}
       </div>
 
-      <Schedule/>
+      <Schedule />
     </div>
   );
 };

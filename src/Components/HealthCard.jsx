@@ -3,7 +3,7 @@ const HealthCard = ({ title, icon, date, progress, color }) => {
   return (
     <div className="laptop:h-[17vh] tablg:h-[120px] pro7:h-[8vh] tab:w-[130px] tablg:w-[150px] tab:h-[10vh] h-[90px] laptop:w-[22vh] w-[130px] rounded-xl px-2 bg-[#F5F9FF]">
       <div className="flex items-center py-2  gap-3">
-        <img className="h-8 w-8 object-cover" src={icon} alt="" />
+        <img className="h-8 w-8 object-cover" src={icon} alt={`${title} icon`} />
         <span className="text-[1rem] laptop:text-[1rem] pro7:text-[1.2rem] tablg:text-[1.2rem] font-semibold text-[#2F3299]">
           {title}
         </span>

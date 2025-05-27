@@ -3,14 +3,14 @@ import AnatomySection from "./AnatomySection";
 import HealthCard from "./HealthCard";
 import healthData from "../Data/HealthData";
 import Activity from "./Activity";
-import activityData from '../Data/ActivityData'
+import activityData from "../Data/ActivityData";
 import SearchBar from "./SearchBar";
 
 const Dashboardleft = () => {
   return (
     <div className="w-full md:w-[90%] lg:w-[80%] mb-2 mt-3 xl:w-[55%] px-4">
       <div className="w-full  mb-2 ">
-      <SearchBar />
+        <SearchBar />
       </div>
       <div className="w-full mt-5 flex justify-between items-center">
         <h1 className="font-bold  text-2xl text-[#2E3479]">Dashboard</h1>
@@ -18,7 +18,7 @@ const Dashboardleft = () => {
           This week <i className="ri-arrow-down-s-line text-[#2E3479]"></i>
         </h3>
       </div>
-      <div  className="w-full md:flex justify-between items-start p-5 gap-6">
+      <div className="w-full md:flex justify-between items-start p-5 gap-6">
         <AnatomySection />
 
         <div className="flex mt-3  flex-wrap md:flex-col gap-4">
@@ -39,9 +39,8 @@ const Dashboardleft = () => {
         </div>
       </div>
       <div className=" md:w-full ">
-       <Activity data = {activityData}/>
+        <Activity data={activityData} />
       </div>
-
     </div>
   );
 };
