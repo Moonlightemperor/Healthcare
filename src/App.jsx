@@ -4,7 +4,7 @@ import Hero from './Components/Hero'
 
 const App = () => {
   return (
-    <div className='h-screen w-full flex'>
+    <div className='h-full md:w-full  flex'>
       <Sidebar/>
       <Hero/>
     </div>

@@ -7,7 +7,7 @@ import Schedule from "./Schedule";
 // bg-[#F5F9FF]
 const DashboardRight = () => {
   return (
-    <div className="w-[47%] rounded-lg p-3   h-full bg-[#F5F9FF]">
+    <div className="md:w-[47%] tab:w-full laptop:w-[47%] rounded-lg p-3 h-full bg-[#F5F9FF]">
       <Header />
       <RightCalendarSection />
       <div className="flex gap-4 w-full">
@@ -18,8 +18,8 @@ const DashboardRight = () => {
             title={item.title}
             time={item.time}
             doctor={item.doctor}
-            bgColor={id === 1 ? "#D7DEF7" : "#2F329B"}
-            textColor={id === 1 ? "#2F329B" : "#fff"}
+            bgColor={item.bgColor}
+            textColor={item.textColor}
           />
         ))}
       </div>

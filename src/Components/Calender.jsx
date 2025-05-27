@@ -24,10 +24,10 @@ const selectedCells = {
 
 export default function RightCalendarSection() {
   return (
-    <div className="">
+    <div>
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h2 className="font-bold text-sm mt-2 text-[#2E3479]">October 2021</h2>
+        <h2 className="font-bold laptop:text-sm tablg:text-xl pro7:text-xl  mt-2 text-[#2E3479]">October 2021</h2>
         <div className="flex gap-2 text-indigo-500 text-xl font-bold">
           <i className="ri-arrow-left-line" />
           <i className="ri-arrow-right-line" />
@@ -35,26 +35,26 @@ export default function RightCalendarSection() {
       </div>
 
       {/* Calendar Grid */}
-      <div className="flex  w-full gap-4">
+      <div className="flex  w-full md:gap-4 gap-1 duo:gap-3">
         {days.map(({ day, date, active }, colIdx) => (
           <div
             key={colIdx}
-            className={`flex flex-col items-center  w-15 gap-2 py-2 ${
+            className={`flex flex-col items-center  md:w-15 w-16 duo:w-20 gap-2 py-2 ${
               active ? "bg-indigo-100 rounded-xl" : ""
             }`}
           >
             {/* Day Header */}
             <div
-              className={`flex flex-col items-center ${
+              className={`flex flex-col  items-center ${
                 active
                   ? "text-[#2E3479] font-bold"
                   : colIdx === 6
-                  ? "text-zinc-400 font-semibold ml-[-95%]"
+                  ? "text-zinc-400 font-semibold md:ml-[-95%] ml-[-20%]"
                   : "text-[#2E3479] font-bold"
               }`}
             >
-              <span className="text-sm">{day}</span>
-              <span className="text-base">{date}</span>
+              <span className="text-sm laptop:text-sm tablg:text-xl pro7:text-xl">{day}</span>
+              <span className="text-base laptop:text-base tablg:text-xl pro7:text-xl">{date}</span>
             </div>
 
             {/* Time Cells */}
@@ -89,15 +89,15 @@ export default function RightCalendarSection() {
               return (
                 <div
                   key={rowIdx}
-                  className={`relative text-[0.7rem] text-center px-2 py-2 flex items-center justify-center ${
+                  className={`relative text-[0.7rem] laptop:text-[0.7rem] tablg:text-[1rem] pro7:text-[1rem] text-center px-2 py-2 flex items-center justify-center ${
                     isTuesday
                       ? "bg-[#2E3479] text-[0.7rem] rounded-md text-zinc-100 font-semibold"
                       : isSelected
                       ? `bg-[#A1A8D0] text-zinc-100 font-medium ${roundedClass} ${
-                          isPrevSelected ? "ml-[-95%]" : ""
+                          isPrevSelected ? "md:ml-[-95%] ml-[-39%]" : ""
                         }`
                       : colIdx === 6
-                      ? "text-zinc-400 ml-[-95%]"
+                      ? "text-zinc-400 md:ml-[-95%] ml-[-20%]"
                       : "text-[#2E3479]"
                   }`}
                 >

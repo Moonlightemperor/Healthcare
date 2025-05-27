@@ -1,16 +1,13 @@
 import React from 'react'
-import SearchBar from './SearchBar'
-import Header from './Header'
 import Dashboardleft from './Dashboardleft'
 import DashboardRight from './DashboardRight'
 
 const Hero = () => {
   return (
     <>
-        <div className='md:w-[83%]   md:py-9 ml-[17%]  w-full min-h-screen p-1 '>
-      
-     
-        <div className='md:flex w-full '>
+        <div className='md:w-[83%]   overflow-x-hidden   md:ml-[17%]  p-1 '>
+
+        <div className='md:flex laptop:flex-row tab:flex-col'>
         <Dashboardleft/>
         <DashboardRight/>
         </div>

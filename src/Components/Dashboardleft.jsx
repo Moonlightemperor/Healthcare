@@ -8,20 +8,20 @@ import SearchBar from "./SearchBar";
 
 const Dashboardleft = () => {
   return (
-    <div className="w-[55%] p-4">
-      <div className="w-full mb-2 ">
+    <div className="w-full md:w-[90%] lg:w-[80%] mb-2 mt-3 xl:w-[55%] px-4">
+      <div className="w-full  mb-2 ">
       <SearchBar />
       </div>
-      <div className="w-full flex justify-between items-center">
-        <h1 className="font-bold px-3 text-2xl text-[#2E3479]">Dashboard</h1>
+      <div className="w-full mt-5 flex justify-between items-center">
+        <h1 className="font-bold  text-2xl text-[#2E3479]">Dashboard</h1>
         <h3 className="text-sm text-[#2E3479]  ">
           This week <i className="ri-arrow-down-s-line text-[#2E3479]"></i>
         </h3>
       </div>
-      <div className="w-full   flex p-8 justify-between items-start">
+      <div  className="w-full md:flex justify-between items-start p-5 gap-6">
         <AnatomySection />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex mt-3  flex-wrap md:flex-col gap-4">
           {healthData.map((item, index) => (
             <HealthCard
               key={index}
@@ -33,12 +33,12 @@ const Dashboardleft = () => {
             />
           ))}
 
-          <span className="text-sm mr-[-16%] text-[#2F3299] flex justify-end gap-2 items-center">
+          <span className="text-sm  text-[#2F3299] flex justify-end gap-2 items-center">
             Details <i className="ri-arrow-right-line"></i>
           </span>
         </div>
       </div>
-      <div className="p-4 ">
+      <div className=" md:w-full ">
        <Activity data = {activityData}/>
       </div>
 

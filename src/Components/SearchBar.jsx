@@ -2,8 +2,8 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center w-full mt-3  gap-4 md:gap-3 px-4">
-      <div className="md:ml-0 ml-[-6%] md:w-full w-[90%] lg:h-[7vh] h-[6vh] flex items-center px-4 border border-zinc-200 rounded-md bg-white">
+    <div className="flex items-center h-[6vh] w-full md:mt-3   gap-4 md:gap-3 px-4">
+      <div className="ml-6 md:ml-[-6%]  md:w-full w-[70%] laptop:h-[7vh] h-[6vh] flex items-center px-4 border border-zinc-200 rounded-md bg-white">
         <i className="ri-search-line text-[#2C2156] text-xl"></i>
         <input
           type="text"

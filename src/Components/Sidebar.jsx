@@ -19,17 +19,17 @@ const Sidebar = () => {
 </div>
 
 
-<aside className={`fixed top-0 left-0 h-full flex flex-col w-[80%] md:w-[17%] z-40  bg-[#EDF6FF]  md:p-[3%] p-6 transform ${
+<aside className={`fixed top-0 left-0 h-full flex flex-col w-[80%] tab:w-[18%] laptop:w-[17%] z-40  bg-[#EDF6FF]   md:p-[2%] p-6 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto `}>
-      <h1 className="text-xl md:mt-6 mt-9 font-bold py-2 ">
+      <h1 className="text-xl md:mt-1 mt-4 font-bold py-2 ">
         <span className="text-[#00D4ED]">Health</span>
         <span className="text-[#2C2156]">care.</span>
       </h1>
 
       <nav className="mt-7 ">
         <h2 className="text-sm font-semibold text-zinc-400 mb-4">General</h2>
-        <ul className="flex flex-col gap-5 text-[#6F6E91] text-sm font-medium">
+        <ul className="flex flex-col gap-5 text-[#6F6E91] text-sm laptop:text-sm tablg:text-lg font-medium">
           {navItems.map((item, index) => (
             <li
               key={index}
@@ -46,8 +46,8 @@ const Sidebar = () => {
       </nav>
 
       <nav className="mt-9">
-        <h2 className="text-sm font-semibold text-zinc-400 mb-4">Tools</h2>
-        <ul className="flex flex-col gap-5 text-zinc-400 text-sm font-medium">
+        <h2 className="text-sm  font-semibold text-zinc-400 mb-4">Tools</h2>
+        <ul className="flex flex-col gap-5 text-zinc-400 text-sm  laptop:text-sm tablg:text-lg  font-medium">
           <li className=" flex items-center gap-4">
             <i className="ri-wechat-2-fill"></i>Chat
           </li>
@@ -58,7 +58,7 @@ const Sidebar = () => {
       </nav>
 
       <nav className="mt-auto">
-        <ul className="flex flex-col gap-5 text-zinc-400 text-sm font-medium">
+        <ul className="flex flex-col gap-5 text-zinc-400 text-sm  laptop:text-sm tablg:text-lg font-medium">
           <li className="flex items-center  gap-4">
             <i className="ri-settings-2-line"></i>Settings
           </li>
