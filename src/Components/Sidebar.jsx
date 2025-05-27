@@ -1,7 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
+
+/**
+ * Sidebar Component
+ * -----------------
+ * A responsive sidebar for navigation in the Healthcare Dashboard.
+ * Displays logo, primary navigation (General), tools section, and settings.
+ * Collapsible on mobile using a hamburger menu (RiIcons used for visuals).
+ */
+
+ 
 const Sidebar = () => {
+  // Toggle sidebar visibility on small screens
   const [isOpen, setIsOpen] = useState(false);
+
+  // Main navigation items under "General"
   const navItems = [
     {
       icon: <i className="ri-dashboard-horizontal-fill"></i>,
@@ -12,8 +25,20 @@ const Sidebar = () => {
     { icon: <i className="ri-add-box-fill"></i>, label: "Appointments" },
     { icon: <i className="ri-line-chart-fill"></i>, label: "Statistics" },
   ];
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
   return (
     <>
+      {/* Hamburger menu for mobile */}
       <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -22,7 +47,7 @@ const Sidebar = () => {
           <i className={isOpen ? "ri-close-fill" : "ri-menu-line"}></i>
         </button>
       </div>
-
+      {/* Sidebar container */}
       <aside
         className={`fixed top-0 left-0 h-full flex flex-col w-[80%] tab:w-[18%] laptop:w-[17%] z-40  bg-[#EDF6FF]   md:p-[2%] p-6 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -71,7 +96,7 @@ const Sidebar = () => {
           </ul>
         </nav>
       </aside>
-
+    {/* Backdrop overlay for mobile sidebar */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-30 md:hidden"

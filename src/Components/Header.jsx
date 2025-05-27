@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import avatar from "../assets/Avatar.svg";
 
 const Header = () => {
+   // Local state to toggle visibility of the dropdown on small screens
   const [showDropdown, setShowDropdown] = useState(false);
 
+    // Toggles the dropdown visibility
   const toggleDropdown = () => setShowDropdown((prev) => !prev);
+
+   // Handles the click event for the "Add New" button in the dropdown
   const handleAddClick = () => {
     console.log("Add button clicked");
     setShowDropdown(false);
@@ -13,7 +17,7 @@ const Header = () => {
   return (
     <div className="w-full flex mt-3 justify-end px-4 py-2">
       <div className="relative flex items-center gap-2">
-        {/* Avatar */}
+         {/* User Avatar - clickable to toggle dropdown on small screens */}
         <img
           src={avatar}
           alt="User avatar"
