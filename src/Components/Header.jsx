@@ -21,7 +21,7 @@ const Header = () => {
         <img
           src={avatar}
           alt="User avatar"
-          className="w-10 h-10 bg-[#22D3DD] rounded-md object-cover cursor-pointer"
+          className="md:w-10 md:h-10 h-[4vh] w-[4vh] bg-[#22D3DD] rounded-md object-cover cursor-pointer"
           onClick={toggleDropdown}
           tabIndex={0}
           onKeyDown={(e) => e.key === "Enter" && toggleDropdown()}

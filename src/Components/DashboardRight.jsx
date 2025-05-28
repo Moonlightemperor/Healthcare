@@ -23,8 +23,8 @@ import Schedule from "./Schedule";
 
 const DashboardRight = () => {
   return (
-    <div className="md:w-[47%]  laptop:w-[47%] rounded-lg p-3 h-full bg-[#F5F9FF]">
-      <Header />
+    <div className="md:w-[47%] tab:w-full laptop:py-20 laptop:w-[47%] rounded-lg p-3 h-full bg-[#F5F9FF]">
+   
       <RightCalendarSection />
         {/* Appointments list (scrollable row of appointment cards) */}
       <div className="flex gap-4 w-full">
